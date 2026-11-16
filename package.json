@@ -1,0 +1,29 @@
+{
+  "name": "job-matcher",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit --incremental false",
+    "check:mysql": "node scripts/check-mysql.mjs",
+    "check:chroma": "node scripts/check-chroma.mjs",
+    "embeddings:backfill": "node scripts/backfill-embeddings.mjs"
+  },
+  "dependencies": {
+    "@chroma-core/default-embed": "^0.1.9",
+    "bcryptjs": "^3.0.3",
+    "chroma": "^0.0.1",
+    "chromadb": "^3.0.0",
+    "mysql2": "^3.14.0",
+    "next": "^15.5.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "typescript": "^5.8.0"
+  }
+}
